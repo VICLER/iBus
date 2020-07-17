@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map For iBus
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+iBus	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+process	KEYWORD2
+get	KEYWORD2
+available	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+MAX_CHANNELS LITERAL1
