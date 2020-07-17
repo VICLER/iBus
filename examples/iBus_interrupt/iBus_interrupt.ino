@@ -8,18 +8,18 @@ void setupTimer(){
   TCCR2A = 0;
   TCCR2B = 0;
   TCNT2  = 0;
-  OCR2A = 125;                            // 500us period
-  TCCR2A |= (1 << WGM21);                 // turn on CTC mode
-  //TCCR2B |= (1 << CS20) | (1 << CS21);  // 32 prescaler for 8Mhz
-  TCCR2B |= (1 << CS22);                  // 64 prescaler for 16Mhz
-  TIMSK2 |= (1 << OCIE2A);                // enable timer compare interrupt
+  OCR2A = 125;                              // 500us period
+  TCCR2A |= (1 << WGM21);                  // turn on CTC mode
+  //TCCR2B |= (1 << CS20) | (1 << CS21);  // 32 prescaler for 8Mhz Clock
+  TCCR2B |= (1 << CS22);                 // 64 prescaler for 16Mhz Clock
+  TIMSK2 |= (1 << OCIE2A);              // enable timer compare interrupt
   sei();
 }
 
 void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
   receiver.begin();
   setupTimer();
-  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
