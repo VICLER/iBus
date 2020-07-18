@@ -18,6 +18,7 @@ public:
     bool available();
     uint16_t get(uint8_t channel);
     uint8_t getPWM(uint8_t channel);
+    uint16_t getServo_us(uint8_t channel);
 
 private:
     HardwareSerial &_serial;

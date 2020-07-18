@@ -48,6 +48,11 @@ uint8_t iBus::getPWM(uint8_t channel)
     return (_channels[channel] - MIN_PULSE) * 0.255f;
 }
 
+uint16_t iBus::getServo_us(uint8_t channel)
+{
+    return ((_channels[channel] - 706.89655) * 1.856); // range 0 -> 180 using WriteMicroseconds
+}
+
 bool iBus::available()
 {
     return (millis() - _last_available < 20);
