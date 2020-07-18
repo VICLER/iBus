@@ -67,7 +67,7 @@ void loop() {
     Serial.print(receiver.get(i));
     Serial.print('\t');
   }
-  Serial.println(receiver.get(0));  //  indicates received packet quality. If 0 -> there are some corrupted values
+  Serial.println(receiver.get(0));  // received packet quality. If 0 -> there are some corrupted values
   delay(10);
 }
 ```
